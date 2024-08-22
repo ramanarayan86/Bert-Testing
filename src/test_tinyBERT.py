@@ -7,6 +7,8 @@ model_name = "huawei-noah/TinyBERT_General_4L_312D"
 tokenizer = BertTokenizer.from_pretrained(model_name)
 model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
+print(model)
+
 # Ensure the model is in evaluation mode
 model.eval()
 
@@ -39,3 +41,4 @@ if predicted_class == 1:
     print("The sentiment is positive.")
 else:
     print("The sentiment is negative.")
+
